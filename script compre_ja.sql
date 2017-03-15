@@ -20,8 +20,8 @@ CREATE TABLE IF NOT EXISTS `zend-db`.`cliente` (
   `regiao` SET('Norte', 'Nordeste', 'Sul', 'Sudeste', 'Centro-Oeste') NOT NULL,
   `unidade` SET('Porto Alegre', 'Curitiba', 'São Paulo', 'Rio de Janeiro', 'Belo Horizonte', 'Brasília', 'Salvador', 'Recife', 'INDISPONÍVEL') NOT NULL,
   `data_nascimento` DATE NOT NULL,
-  `score` INT UNSIGNED NOT NULL,
-  `token` TINYINT(2) NOT NULL,
+  `score` TINYINT(2) UNSIGNED NOT NULL,
+  `token` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `email_UNIQUE` (`email` ASC))
 ENGINE = InnoDB;
